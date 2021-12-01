@@ -1,9 +1,11 @@
 import * as index from './pages/index';
-import * as detail from './pages/detail';
-import * as replace from './pages/replace';
+import * as toilet from './pages/toilet';
+import * as route from './pages/route';
+import * as star from './pages/star';
 
 export default {
   index,
-  detail,
-  replace,
+  toilet,
+  route,
+  star,
 };

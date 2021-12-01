@@ -1,13 +1,17 @@
 import { inbox } from 'file-transfer';
 import * as filesystem from 'fs';
 import * as messaging from 'messaging';
+import * as jpeg from 'jpeg';
 
 const state = {
+  listData: [],
+  listItem: null,
   items: [],
   list: [],
   letter: '',
   companionTimestamp: 0,
   location: '',
+  map: '',
   // add other state-items here
 };
 
@@ -82,6 +86,37 @@ function processFiles() {
 
       updateState();
       callback();
+    } else if (fileName === 'listData.cbor') {
+      const data = filesystem.readFileSync(fileName, 'cbor');
+
+      Object.keys(state).forEach((key) => {
+        if (typeof data[key] !== 'undefined') state[key] = data[key];
+      });
+
+      updateState();
+      callback();
+    } else if (fileName === 'listItem.cbor') {
+      const data = filesystem.readFileSync(fileName, 'cbor');
+
+      Object.keys(state).forEach((key) => {
+        if (typeof data[key] !== 'undefined') state[key] = data[key];
+      });
+
+      updateState();
+      callback();
+    } else if (fileName.indexOf('map-') >= 0) {
+      if (state.map) {
+        filesystem.unlinkSync(state.map);
+      }
+      const outFileName = `${fileName}.txi`;
+      jpeg.decodeSync(fileName, outFileName);
+      filesystem.unlinkSync(fileName);
+      state.map = `/private/data/${outFileName}`;
+
+      console.log(state.map);
+
+      updateState();
+      if (callback) callback();
     }
   }
 }

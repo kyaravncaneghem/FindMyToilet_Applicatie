@@ -1,0 +1,7 @@
+<svg viewport-fill="#000000">
+  <textarea fill="#00FFFF" x="18" y="3" width="300" height="110" font-size="36" font-family="System-Regular" text-anchor="middle" text-buffer="_stars" />
+  <use href="#button" fill="#323232" x="10%" y="10%" width="10%" height="10%">
+    <set href="text" attributeName="text-buffer" to="<" />
+    <set href="handle" attributeName="id" to="back-button" />
+  </use>
+</svg>

@@ -1,0 +1,34 @@
+.list-item {
+  height: 90;
+}
+
+.list-item text {
+  fill: #a9a9a9;
+  text-anchor: middle;
+  x: 50%;
+  font-size: 25;
+  text-length: 30;
+}
+
+.line {
+  width: 100%;
+  height: 3;
+  fill: #a9a9a9;
+  y: 100%-6;
+}
+
+.bg {
+  fill: #191919;
+  width: 100%;
+  height: 100%;
+  x: 0;
+  y: 0;
+}
+
+#touch {
+  width: 100%;
+  height: 100%-6;
+  x: 0;
+  y: 0;
+  opacity: 0;
+}

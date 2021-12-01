@@ -1,0 +1,20 @@
+msgid "toilet"
+msgstr "Toilet"
+
+msgid "route"
+msgstr "Route"
+
+msgid "stars"
+msgstr "Stars"
+
+msgid "the_fastest"
+msgstr "The fastest app you can use to find the best public toilet near you!"
+
+msgid "search"
+msgstr "Search!"
+
+msgid "map"
+msgstr "Map"
+
+msgid "urinal"
+msgstr "Urinal"
