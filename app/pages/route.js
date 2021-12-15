@@ -30,7 +30,7 @@ function draw() {
       console.log(`Item: ${info.index}`);
       if (info.type == 'my-pool') {
         tile.getElementById('text').text = `${info.value.name}`;
-
+        tile.getElementById('subtitle').text = `${info.value.type}`;
         let touch = tile.getElementById('touch');
         touch.onclick = function () {
           setStateItem('detailId', info.value.id);
@@ -52,7 +52,6 @@ export function destroy() {
 
 export function init() {
   getListData();
-  setStateCallback('index', draw);
 
   console.log('init route page');
   myList = document.getElementById('myList');
@@ -64,4 +63,5 @@ export function init() {
     switchPage('index');
   };
   setStateCallback('route', draw);
+  draw();
 }

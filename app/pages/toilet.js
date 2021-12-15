@@ -10,47 +10,54 @@ import {
 
 let $button = null;
 let myList = null;
+let loader = null;
 
 function draw() {
   const list = getStateItem('listData');
 
-  myList.delegate = {
-    getTileInfo: (index) => {
-      return {
-        type: 'my-pool',
-        value: list[index],
-        index: index,
-      };
-    },
-    configureTile: (tile, info) => {
-      console.log(`Item: ${info.index}`);
-      if (info.type == 'my-pool') {
-        tile.getElementById('text').text = `${info.value.name}`;
-
-        let touch = tile.getElementById('touch');
-        touch.onclick = function () {
-          setStateItem('detailId', info.value.id);
-          switchPage('index', true);
+  if (list && list.length) {
+    myList.delegate = {
+      getTileInfo: (index) => {
+        return {
+          type: 'my-pool',
+          value: list[index],
+          index: index,
         };
-      }
-    },
-  };
-  myList.length = list.length;
+      },
+      configureTile: (tile, info) => {
+        console.log(`Item: ${info.index}`);
+        if (info.type == 'my-pool') {
+          tile.getElementById('text').text = `${info.value.name}`;
+          tile.getElementById('subtitle').text = `${info.value.user}`;
+          let touch = tile.getElementById('touch');
+          touch.onclick = function () {
+            setStateItem('detailId', info.value.id);
+            switchPage('route', true);
+          };
+        }
+      },
+    };
+    myList.length = list.length;
+    loader.style.display = 'none';
+  } else {
+    loader.style.display = 'inline';
+  }
 }
 
 export function destroy() {
   console.log('destroy toilet page');
   $button = null;
   myList = null;
+  loader = null;
   removeStateCallback('toilet');
 }
 
 export function init() {
+  myList = document.getElementById('myList');
+  loader = document.getElementById('loader');
   getListData();
-  setStateCallback('index', draw);
 
   console.log('init toilet page');
-  myList = document.getElementById('myList');
 
   $button = document.getElementById('back-button');
   $button.onclick = () => {
@@ -58,4 +65,5 @@ export function init() {
     document.history.back();
   };
   setStateCallback('toilet', draw);
+  draw();
 }

@@ -1,2 +1,20 @@
 msgid "hello_world"
 msgstr "Hallo wereld!"
+
+msgid "myfavoritetoilet"
+msgstr "Mijn favoriete toilet!"
+
+msgid "toiletsilove"
+msgstr "Toiletten die ik goed vind!"
+
+msgid "additem"
+msgstr "Voeg item toe"
+
+msgid "addlistitem"
+msgstr "Voeg lijst item toe"
+
+msgid "typesomething"
+msgstr "Zoeken"
+
+msgid "toiletsihate"
+msgstr "Toiletten die ik haat!"

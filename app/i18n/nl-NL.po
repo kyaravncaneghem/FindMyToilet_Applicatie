@@ -5,10 +5,10 @@ msgid "route"
 msgstr "Route"
 
 msgid "stars"
-msgstr "Sterren"
+msgstr "Favoriet"
 
 msgid "the_fastest"
-msgstr "De snelste app die je kan gebruiken om een openbaar toilet in je buurt te vinden!"
+msgstr "De snelste app die je kan gebruiken om een toilet in je buurt te vinden!"
 
 msgid "search"
 msgstr "Zoeken!"

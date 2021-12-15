@@ -19,7 +19,7 @@ export function getListItem(id) {
   }
 }
 
-// get data
+// get list data
 export function getListData() {
   if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
     messaging.peerSocket.send({
@@ -32,5 +32,6 @@ export function getListData() {
 export function init() {
   messaging.peerSocket.addEventListener('open', () => {
     getLocationName();
+    getListData();
   });
 }

@@ -1,20 +1,20 @@
 <svg viewport-fill="#000000">
-  <textarea fill="#61DDE8" x="18" y="3" width="300" height="110" font-size="36" font-family="System-Regular" text-anchor="middle" text-buffer="Find  My Toilet" />
-  <textarea fill="#A9A9A9" x="18" y="60" width="300" height="110" font-size="20" font-family="System-Regular" text-anchor="middle" text-buffer="_the_fastest" />
+  <textarea fill="#61DDE8" x="18" y="25" width="300" height="110" font-size="36" font-family="System-Bold" text-anchor="middle" text-buffer="Find  My Toilet" />
+  <textarea fill="#A9A9A9" x="2" y="70" width="330" height="110" font-size="21" font-family="System-Regular" text-anchor="middle" text-buffer="_the_fastest" />
 
-  <use href="#button" fill="#323232" x="10%" y="40%" width="30%" height="30%">
+  <use href="#button" fill="#323232" x="10%" y="42%" width="30%" height="30%">
     <set href="text" attributeName="text-buffer" to="" />
     <set href="handle" attributeName="id" to="toilet-button" />
     <set href="icon" attributeName="href" to="icons/paper.png" />
   </use>
 
-  <use href="#button" fill="#323232" x="60%" y="40%" width="30%" height="30%">
+  <use href="#button" fill="#323232" x="60%" y="42%" width="30%" height="30%">
     <set href="text" attributeName="text-buffer" to="" />
     <set href="handle" attributeName="id" to="route-button" />
     <set href="icon" attributeName="href" to="icons/arrow-pointer.png" />
   </use>
 
-  <use href="#button" fill="#323232" x="35%" y="70%" width="30%" height="30%">
+  <use href="#button" fill="#323232" x="35%" y="65%" width="30%" height="30%">
     <set href="text" attributeName="text-buffer" to="" />
     <set href="handle" attributeName="id" to="star-button" />
     <set href="icon" attributeName="href" to="icons/star.png" />

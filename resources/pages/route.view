@@ -11,13 +11,14 @@
       <use id="my-pool[2]" href="#my-item" />
       <use id="my-pool[3]" href="#my-item" />
       <use id="my-pool[4]" href="#my-item" />
-      <use id="my-pool[5]" href="#my-item" /> 
+      <use id="my-pool[5]" href="#my-item" />
     </use>
   </use>
 
   <image id="map" x="0" y="0" width="100%" height="50%" />
 
   <use href="#button" fill="#323232" x="10%" y="10%" width="10%" height="10%" >
+    <set href="circle" attributeName="r" to="20" />
     <set href="text" attributeName="text-buffer" to="<"/>
     <set href="handle" attributeName="id" to="back-button" />
   </use>

@@ -5,7 +5,7 @@ msgid "route"
 msgstr "Route"
 
 msgid "stars"
-msgstr "Stars"
+msgstr "Favorite"
 
 msgid "the_fastest"
 msgstr "The fastest app you can use to find the best public toilet near you!"

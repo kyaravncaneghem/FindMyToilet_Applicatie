@@ -81,7 +81,9 @@ async function getListData() {
   const listData = data.map((item) => {
     return {
       name: item.name,
+      user: item.user,
       id: item.id,
+      type: item.type,
     };
   });
 
@@ -89,7 +91,7 @@ async function getListData() {
 
   outbox
     .enqueue('listData.cbor', cbor.encode({ listData }))
-    .then(() => console.log(' listData sent'))
+    .then(() => console.log('listData sent'))
     .catch((error) => console.log(`send error: ${error}`));
 }
 
